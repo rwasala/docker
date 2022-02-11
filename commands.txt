@@ -1,0 +1,9 @@
+cd /mnt/c/repos-ref/docker
+docker build -t rwasala/docker .
+docker run -e SOME_SETTING=aaa -e DIRECTORY=/data -v /mnt/c/repos-ref/tmp:/data -p 3000:3000 rwasala/docker
+docker login
+docker push rwasala/docker
+docker pull
+docker ps
+docker rmi
+docker exec -it HASH /bin/bash
